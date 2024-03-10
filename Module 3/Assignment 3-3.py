@@ -15,7 +15,9 @@ day = None
 
 # Get the year, then the month, then the day
 # housekeeping()
-
+month = int(input())
+day = int(input())
+year = int(input())
 # Check to be sure date is valid
 
 if int(year) <= MIN_YEAR: # invalid year
@@ -30,5 +32,7 @@ elif int(day) < MIN_DAY or int(day) > MAX_DAY: # invalid day
 # endOfJob()
 if validDate == True:
     # Output statement
+    print ("{0}/{1}/{2} is a valid date.".format(month, day, year))
 else:
     # Output statement
+    print ("{0}/{1}/{2} is a invalid date.".format(month, day, year))
