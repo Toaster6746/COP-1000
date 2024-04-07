@@ -8,7 +8,7 @@ def x_function():
         for i in AllowedVehiclesList:
             print (i, end=" \n")
         x_function()
-    elif y == 2:
+    if y == 2:
         print ("Please Enter the full Vehicle name:")
         z = str(input())
         if z in AllowedVehiclesList:
@@ -17,13 +17,13 @@ def x_function():
         else:
             print(z + " is not an authorized vehicle, if you received this in error please check the spelling and try again")
             x_function()
-    elif y == 3 :
+    if y == 3 :
         print ("Please Enter the full Vehicle name you would like to add:")
         addedVehicle = str(input())
         AllowedVehiclesList.append(addedVehicle)
         print("You have added \"" + addedVehicle  + "\" as an authorized vehicle")
         x_function()
-    elif y == 4 :
+    if y == 4 :
         print ("Please Enter the full Vehicle name you would like to REMOVE:")
         removedVehicle = str(input())
         print("Are you sure you want to remove \"" + removedVehicle + "\" from the Authorized Vehicles List?")
@@ -31,9 +31,9 @@ def x_function():
         if yesOrNo.lower() == str("yes"):
             AllowedVehiclesList.remove(removedVehicle)
             print("You have REMOVED \"" + removedVehicle  + "\" as an authorized vehicle")
-            x_function
+            x_function()
         else:
-            x_function
+            x_function()
     else:
         print("Thank you for using the AutoCountry Vehicle Finder, good-bye!")
 x_function()
